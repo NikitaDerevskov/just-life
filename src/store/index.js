@@ -19,7 +19,13 @@ export default new Vuex.Store({
        */
 
       this.state.todoThings.push({ name: thing });
-      localStorage.setItem(thing, thing);
+      /* eslint-disable */
+      // console.log(this.state.todoThings)
+      // localStorage.setItem(thing, thing);
+    },
+    deleteTodoThing(state, thing) {
+		let things = this.state.todoThings.filter(({name}) => name !== thing.name)
+		Vue.set(state, 'todoThings', things)
     }
   },
   actions: {},
