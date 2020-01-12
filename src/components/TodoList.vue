@@ -39,6 +39,7 @@ export default {
     ...mapMutations(["addTodoThing", "deleteTodoThing"]),
     /* eslint-disable */
     editTodoThing(item, index) {
+      /* TODO please refactor this.*/
       let elem = document.getElementById(index)
       /* Delete name */
       elem.removeChild(elem.childNodes[0])
